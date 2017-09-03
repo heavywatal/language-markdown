@@ -1233,6 +1233,44 @@
               "name": "punctuation.definition.arguments.end.latex"
             }
           }
+        },
+        {
+          "name": "block.math.markup.md",
+          "begin": "(<)(\\w+)(>)\\s*(\\\\\\[)",
+          "end": "(\\\\\\])\\s*(</)(\\2)(>)",
+          "patterns": [
+            {
+              "include": "text.tex.latex"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.block.any.html"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.html"
+            },
+            "4": {
+              "name": "punctuation.definition.string.begin.latex"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.latex"
+            },
+            "2": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "3": {
+              "name": "entity.name.tag.block.any.html"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          }
         }
       ]
     },
